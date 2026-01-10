@@ -8,40 +8,240 @@
 
   <style>
     :root{
-      --bg:#f8fafc;
+      --bg1:#0b1220;
+      --bg2:#0a2a66;
       --card:#ffffff;
       --text:#0f172a;
-      --muted:#475569;
+      --muted:#64748b;
       --border:#e2e8f0;
       --brand:#2563eb;
-      --shadow: 0 10px 30px rgba(2,6,23,.08);
-      --radius: 16px;
-      --warnbg: rgba(245,158,11,.10);
-      --warnbd: rgba(245,158,11,.25);
+      --brand2:#60a5fa;
+      --shadow: 0 18px 50px rgba(2,6,23,.35);
+      --radius: 22px;
     }
     *{box-sizing:border-box}
     body{
       margin:0;
       font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Helvetica Neue", sans-serif;
-      background: radial-gradient(1200px 600px at 20% 0%, rgba(37,99,235,.12), transparent 60%),
-                  radial-gradient(900px 500px at 80% 10%, rgba(29,78,216,.10), transparent 55%),
-                  var(--bg);
-      color:var(--text);
-      line-height:1.65;
+      color:#fff;
+      background:
+        radial-gradient(900px 500px at 15% 10%, rgba(96,165,250,.35), transparent 55%),
+        radial-gradient(900px 500px at 85% 20%, rgba(37,99,235,.35), transparent 60%),
+        linear-gradient(135deg, var(--bg1), var(--bg2));
+      min-height:100vh;
     }
-    a{color:var(--brand); text-decoration:none}
-    a:hover{text-decoration:underline}
+    a{color:inherit; text-decoration:none}
+    a:hover{opacity:.9}
 
-    .wrap{max-width: 960px; margin: 48px auto; padding: 0 16px;}
-    .nav{display:flex; align-items:center; justify-content:space-between; gap:10px; margin-bottom:16px;}
-    .nav .title{font-weight:800}
-    .nav .title span{display:block; font-weight:600; color:var(--muted); font-size:12px}
-    .card{
-      background:var(--card);
-      border:1px solid var(--border);
+    .wrap{max-width: 1080px; margin: 0 auto; padding: 34px 16px 60px;}
+    .topbar{
+      display:flex; align-items:center; justify-content:space-between; gap:12px;
+      margin-bottom: 18px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:12px;
+      font-weight:800;
+      letter-spacing:.2px;
+    }
+    .logo{
+      width:44px; height:44px; border-radius:14px;
+      background: linear-gradient(135deg, #60a5fa, #2563eb);
+      box-shadow: 0 12px 30px rgba(37,99,235,.35);
+      position:relative;
+      flex:0 0 auto;
+    }
+    .logo:after{
+      content:""; position:absolute; inset:12px;
+      border-radius:12px; background: rgba(255,255,255,.25);
+    }
+    .brand small{
+      display:block;
+      font-weight:600;
+      opacity:.85;
+      font-size:12px;
+      margin-top:3px;
+    }
+
+    .panel{
+      background: rgba(255,255,255,.10);
+      border: 1px solid rgba(255,255,255,.18);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
+      backdrop-filter: blur(10px);
       overflow:hidden;
     }
-    header{
-      padding: 28px 28
+
+    .hero{padding: 26px 26px 18px;}
+    h1{
+      margin:0 0 8px;
+      font-size: 32px;
+      letter-spacing:-.3px;
+      line-height:1.15;
+    }
+    .sub{
+      margin:0;
+      color: rgba(255,255,255,.85);
+      font-size: 14px;
+      line-height:1.65;
+      max-width: 75ch;
+    }
+
+    .links{
+      display:flex; gap:10px; flex-wrap:wrap;
+      padding: 14px 26px 18px;
+      border-top:1px solid rgba(255,255,255,.14);
+    }
+    .pill{
+      padding: 10px 12px;
+      border-radius: 999px;
+      border:1px solid rgba(255,255,255,.18);
+      background: rgba(255,255,255,.08);
+      font-weight:800;
+      font-size: 13px;
+    }
+    .pill.active{
+      background: linear-gradient(135deg, #60a5fa, #2563eb);
+      color:#06122a;
+      border:0;
+    }
+
+    .contentWrap{padding: 18px;}
+    .card{
+      background:#fff;
+      color: var(--text);
+      border-radius: 18px;
+      border:1px solid rgba(226,232,240,.9);
+      padding: 18px 18px;
+    }
+    h2{
+      margin: 16px 0 8px;
+      font-size: 15px;
+      letter-spacing:.2px;
+      text-transform: uppercase;
+      color:#0f172a;
+    }
+    p{margin: 0 0 12px; color:#0f172a; line-height:1.7}
+    ul{margin: 8px 0 12px 18px; color:#0f172a}
+    li{margin: 6px 0}
+    .note{
+      margin-top: 12px;
+      padding: 12px 12px;
+      border-radius: 14px;
+      background: rgba(37,99,235,.10);
+      border: 1px solid rgba(37,99,235,.18);
+      color:#0f172a;
+      font-size: 13px;
+    }
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:12px;
+      margin-top: 10px;
+    }
+    .row{
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 12px 12px;
+      background: #f8fafc;
+    }
+    .label{font-size:12px; color: var(--muted); margin-bottom:4px;}
+    .value{font-weight:800; font-size:14px; color:#0f172a;}
+
+    .footer{
+      margin-top: 12px;
+      padding: 14px 26px 18px;
+      border-top:1px solid rgba(255,255,255,.14);
+      display:flex;
+      flex-wrap:wrap;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+      color: rgba(255,255,255,.85);
+      font-size: 13px;
+    }
+
+    @media (max-width: 900px){
+      h1{font-size: 28px;}
+      .grid{grid-template-columns: 1fr}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="topbar">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          Zerotonin Innovations Private Limited
+          <small>zerotonin.com</small>
+        </div>
+      </div>
+      <a href="/" class="pill" style="display:inline-flex;">Home</a>
+    </div>
+
+    <div class="panel">
+      <div class="hero">
+        <h1>Terms and Conditions</h1>
+        <p class="sub">Rules and conditions for using this website and any future services offered via Zerotonin.</p>
+      </div>
+
+      <div class="links">
+        <a class="pill" href="privacy-policy.html">Privacy Policy</a>
+        <a class="pill active" href="terms-and-conditions.html">Terms &amp; Conditions</a>
+        <a class="pill" href="refund-policy.html">Refund Policy</a>
+      </div>
+
+      <div class="contentWrap">
+        <div class="card">
+          <p>
+            By accessing or using <b>zerotonin.com</b>, you agree to comply with and be bound by these Terms and Conditions.
+          </p>
+
+          <div class="note">
+            Note: The website is currently under development. Features, services, and payment options may be enabled in the future based on availability.
+          </div>
+
+          <h2>Business Information</h2>
+          <p>
+            <b>Zerotonin Innovations Private Limited</b> provides technology, digital, and innovation-driven services as described on this website.
+          </p>
+
+          <h2>User Obligations</h2>
+          <p>
+            You agree to provide accurate information and to use this website only for lawful purposes. You must not attempt to disrupt, misuse, or gain unauthorized access to the website or its systems.
+          </p>
+
+          <h2>Payments</h2>
+          <p>
+            Payments for services, when enabled, will be processed securely through authorized third-party payment gateways. Zerotonin Innovations Private Limited does not store card, UPI, or banking details on this website.
+          </p>
+
+          <h2>Intellectual Property</h2>
+          <p>
+            All content on this website (including text, graphics, and branding) is the property of Zerotonin Innovations Private Limited and may not be copied, reproduced, or distributed without prior written permission.
+          </p>
+
+          <h2>Limitation of Liability</h2>
+          <p>
+            Zerotonin Innovations Private Limited shall not be held liable for any indirect, incidental, or consequential losses arising from the use of this website or services.
+          </p>
+
+          <h2>Modifications</h2>
+          <p>
+            We reserve the right to update or modify these Terms and Conditions at any time without prior notice. The latest version will always be available on this page.
+          </p>
+
+          <h2>Contact Details</h2>
+          <div class="grid">
+            <div class="row">
+              <div class="label">Email</div>
+              <div class="value">director@zerotonin.com</div>
+            </div>
+            <div class="row">
+              <div class="label">Phone</div>
+              <div class="value">+91 99612 23185</div>
+            </div>
+          </div>
+
+          <p style="margin-top:12px; color:#334155; font-size:13px;">
+            Continued use of the website indicates acceptance of these terms and any f
