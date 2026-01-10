@@ -2,95 +2,179 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Zerotonin Innovations Private Limited</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zerotonin Innovations Private Limited | zerotonin.com</title>
+  <meta name="description" content="Zerotonin Innovations Private Limited - Website under construction. Digital & Software Services." />
 
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f8fafc;
-      color: #1f2937;
+    :root{
+      --bg:#f8fafc;
+      --card:#ffffff;
+      --text:#0f172a;
+      --muted:#475569;
+      --border:#e2e8f0;
+      --brand:#2563eb;
+      --brand2:#1d4ed8;
+      --shadow: 0 10px 30px rgba(2,6,23,.08);
+      --radius: 16px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Helvetica Neue", sans-serif;
+      background:
+        radial-gradient(1200px 600px at 20% 0%, rgba(37,99,235,.12), transparent 60%),
+        radial-gradient(900px 500px at 80% 10%, rgba(29,78,216,.10), transparent 55%),
+        var(--bg);
+      color:var(--text);
+      line-height:1.65;
+    }
+    a{color:var(--brand); text-decoration:none}
+    a:hover{text-decoration:underline}
+
+    .wrap{max-width: 980px; margin: 48px auto; padding: 0 16px;}
+    .topbar{
+      display:flex; align-items:center; justify-content:space-between; gap:12px;
+      margin-bottom: 16px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:10px;
+      font-weight:800; letter-spacing:.2px;
+    }
+    .logo{
+      width:38px; height:38px; border-radius:12px;
+      background: linear-gradient(135deg, var(--brand), var(--brand2));
+      box-shadow: 0 10px 20px rgba(37,99,235,.18);
+      position:relative;
+      flex: 0 0 auto;
+    }
+    .logo:after{
+      content:""; position:absolute; inset:11px;
+      border-radius:10px; background: rgba(255,255,255,.35);
+    }
+    .brand small{
+      display:block;
+      font-weight:700;
+      color:var(--muted);
+      font-size:12px;
+      margin-top:2px;
     }
 
-    .container {
-      max-width: 720px;
-      margin: 80px auto;
-      padding: 40px;
-      background: #ffffff;
-      border-radius: 8px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    .card{
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow:hidden;
     }
-
-    h1 {
-      margin-top: 0;
-      font-size: 28px;
+    header{
+      padding: 30px 28px 18px;
+      background: linear-gradient(135deg, rgba(37,99,235,.10), rgba(29,78,216,.06));
+      border-bottom:1px solid var(--border);
     }
+    h1{margin:0; font-size: 30px; letter-spacing:-.3px}
+    .subtitle{margin:8px 0 0; color:var(--muted); font-size: 14px}
 
-    .subtitle {
-      color: #6b7280;
-      margin-bottom: 24px;
+    .content{padding: 22px 28px 10px}
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:12px;
+      margin-top: 14px;
     }
-
-    .info p {
-      margin: 8px 0;
-      font-size: 15px;
+    .box{
+      border:1px solid var(--border);
+      border-radius: 14px;
+      padding: 12px 14px;
+      background:#ffffff;
     }
+    .label{font-size:12px; color: var(--muted); margin-bottom:4px}
+    .value{font-weight:800; font-size:14px}
 
-    .info b {
-      display: inline-block;
-      width: 140px;
-    }
-
-    .footer {
-      margin-top: 32px;
-      padding-top: 16px;
-      border-top: 1px solid #e5e7eb;
+    .note{
+      margin-top: 14px;
+      border:1px solid rgba(37,99,235,.20);
+      background: rgba(37,99,235,.08);
+      border-radius: 14px;
+      padding: 12px 14px;
       font-size: 14px;
+      color: var(--text);
     }
 
-    .footer a {
-      margin-right: 12px;
-      color: #2563eb;
-      text-decoration: none;
+    footer{
+      padding: 16px 28px 22px;
+      border-top:1px solid var(--border);
+      display:flex;
+      flex-wrap:wrap;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+      color: var(--muted);
+      font-size: 13px;
     }
+    .links{display:flex; gap:12px; flex-wrap:wrap}
+    .links a{font-weight:700}
 
-    .footer a:hover {
-      text-decoration: underline;
-    }
-
-    .note {
-      margin-top: 20px;
-      font-size: 14px;
-      color: #6b7280;
+    @media (max-width: 760px){
+      header{padding: 22px 18px 14px}
+      .content{padding: 18px 18px 8px}
+      footer{padding: 14px 18px 18px}
+      .grid{grid-template-columns: 1fr}
+      h1{font-size: 26px}
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Website Under Construction</h1>
-    <p class="subtitle">
-      Zerotonin is currently building its digital platform.
-    </p>
-
-    <div class="info">
-      <p><b>Business Name:</b> Zerotonin Innovations Private Limited</p>
-      <p><b>Email:</b> director@zerotonin.com</p>
-      <p><b>Phone:</b> +91 99612 23185</p>
-      <p><b>Services:</b> Digital & Software Services</p>
+  <div class="wrap">
+    <div class="topbar">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          Zerotonin Innovations Private Limited
+          <small>zerotonin.com</small>
+        </div>
+      </div>
     </div>
 
-    <p class="note">
-      This website is under development. Official services will be launched soon.
-    </p>
+    <div class="card">
+      <header>
+        <h1>Website Under Construction</h1>
+        <p class="subtitle">Zerotonin is currently building its digital platform.</p>
+      </header>
 
-    <div class="footer">
-      <a href="privacy-policy.html">Privacy Policy</a>
-      <a href="terms-and-conditions.html">Terms & Conditions</a>
-      <a href="refund-policy.html">Refund Policy</a>
-      <p style="margin-top: 12px;">
-        © Zerotonin Innovations Private Limited
-      </p>
+      <div class="content">
+        <div class="grid">
+          <div class="box">
+            <div class="label">Business Name</div>
+            <div class="value">Zerotonin Innovations Private Limited</div>
+          </div>
+          <div class="box">
+            <div class="label">Services</div>
+            <div class="value">Digital & Software Services</div>
+          </div>
+          <div class="box">
+            <div class="label">Email</div>
+            <div class="value">director@zerotonin.com</div>
+          </div>
+          <div class="box">
+            <div class="label">Phone</div>
+            <div class="value">+91 99612 23185</div>
+          </div>
+        </div>
+
+        <div class="note">
+          This website is under development. Official services will be launched soon.
+        </div>
+      </div>
+
+      <footer>
+        <div class="links">
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="terms-and-conditions.html">Terms & Conditions</a>
+          <a href="refund-policy.html">Refund Policy</a>
+        </div>
+        <div>© Zerotonin Innovations Private Limited</div>
+      </footer>
     </div>
   </div>
 </body>
