@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,276 +8,314 @@
   <meta name="description" content="Zerotonin Innovations Private Limited — Digital & Software Services." />
 
   <style>
-    :root{
-      --bg1:#0b1220;
-      --bg2:#0a2a66;
-      --card:#ffffff;
-      --text:#0f172a;
-      --muted:#64748b;
-      --border:#e2e8f0;
-      --brand:#2563eb;
-      --brand2:#60a5fa;
-      --shadow: 0 18px 50px rgba(2,6,23,.35);
+    :root {
+      --bg1: #0b1220;
+      --bg2: #0a2a66;
+      --card: #ffffff;
+      --text: #0f172a;
+      --muted: #64748b;
+      --border: #e2e8f0;
+      --brand: #2563eb;
+      --brand2: #60a5fa;
+      --shadow: 0 18px 50px rgba(2, 6, 23, .35);
       --radius: 22px;
     }
 
-    *{ box-sizing:border-box; }
-    html, body { height:100%; }
-
-    body{
-      margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Helvetica Neue", sans-serif;
-      color:#fff;
-      background:
-        radial-gradient(900px 500px at 15% 10%, rgba(96,165,250,.35), transparent 55%),
-        radial-gradient(900px 500px at 85% 20%, rgba(37,99,235,.35), transparent 60%),
-        linear-gradient(135deg, var(--bg1), var(--bg2));
-      min-height:100vh;
+    * {
+      box-sizing: border-box;
     }
 
-    a{ color:inherit; text-decoration:none; }
-    a:hover{ opacity:.92; }
-    a:focus-visible{
-      outline: 3px solid rgba(96,165,250,.85);
+    html,
+    body {
+      height: 100%;
+    }
+
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Helvetica Neue", sans-serif;
+      color: #fff;
+      background:
+        radial-gradient(900px 500px at 15% 10%, rgba(96, 165, 250, .35), transparent 55%),
+        radial-gradient(900px 500px at 85% 20%, rgba(37, 99, 235, .35), transparent 60%),
+        linear-gradient(135deg, var(--bg1), var(--bg2));
+      min-height: 100vh;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    a:hover {
+      opacity: .92;
+    }
+
+    a:focus-visible {
+      outline: 3px solid rgba(96, 165, 250, .85);
       outline-offset: 3px;
       border-radius: 12px;
     }
 
-    .wrap{
+    .wrap {
       max-width: 1080px;
       margin: 0 auto;
       padding: 34px 16px 60px;
     }
 
-    .topbar{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:12px;
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
       margin-bottom: 26px;
     }
 
-    .brand{
-      display:flex;
-      align-items:center;
-      gap:12px;
-      font-weight:800;
-      letter-spacing:.2px;
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      letter-spacing: .2px;
     }
 
-    .logo{
-      width:44px;
-      height:44px;
-      border-radius:14px;
+    .logo {
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
       background: linear-gradient(135deg, #60a5fa, #2563eb);
-      box-shadow: 0 12px 30px rgba(37,99,235,.35);
-      position:relative;
-      flex:0 0 auto;
+      box-shadow: 0 12px 30px rgba(37, 99, 235, .35);
+      position: relative;
+      flex: 0 0 auto;
     }
 
-    .logo:after{
-      content:"";
-      position:absolute;
-      inset:12px;
-      border-radius:12px;
-      background: rgba(255,255,255,.25);
+    .logo:after {
+      content: "";
+      position: absolute;
+      inset: 12px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, .25);
     }
 
-    .brand small{
-      display:block;
-      font-weight:600;
-      opacity:.85;
-      font-size:12px;
-      margin-top:3px;
+    .brand small {
+      display: block;
+      font-weight: 600;
+      opacity: .85;
+      font-size: 12px;
+      margin-top: 3px;
     }
 
-    .hero{
-      display:grid;
+    .hero {
+      display: grid;
       grid-template-columns: 1.2fr .8fr;
-      gap:18px;
-      align-items:stretch;
+      gap: 18px;
+      align-items: stretch;
     }
 
     /* Panel with fallback when blur is unsupported */
-    .panel{
-      background: rgba(255,255,255,.10);
-      border: 1px solid rgba(255,255,255,.18);
+    .panel {
+      background: rgba(255, 255, 255, .10);
+      border: 1px solid rgba(255, 255, 255, .18);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
-      overflow:hidden;
+      overflow: hidden;
     }
 
     @supports (backdrop-filter: blur(10px)) {
-      .panel{ backdrop-filter: blur(10px); }
+      .panel {
+        backdrop-filter: blur(10px);
+      }
     }
 
-    .heroLeft{ padding: 30px 28px; }
+    .heroLeft {
+      padding: 30px 28px;
+    }
 
-    h1{
-      margin:0 0 10px;
+    h1 {
+      margin: 0 0 10px;
       font-size: 38px;
-      letter-spacing:-.4px;
-      line-height:1.15;
+      letter-spacing: -.4px;
+      line-height: 1.15;
     }
 
-    .sub{
-      margin:0 0 18px;
-      opacity:.9;
-      color: rgba(255,255,255,.85);
+    .sub {
+      margin: 0 0 18px;
+      opacity: .9;
+      color: rgba(255, 255, 255, .85);
       font-size: 15px;
-      line-height:1.6;
+      line-height: 1.6;
       max-width: 55ch;
     }
 
-    .badges{
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
+    .badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
       margin: 16px 0 18px;
     }
 
-    .badge{
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
       padding: 10px 12px;
       border-radius: 999px;
-      background: rgba(255,255,255,.10);
-      border:1px solid rgba(255,255,255,.18);
+      background: rgba(255, 255, 255, .10);
+      border: 1px solid rgba(255, 255, 255, .18);
       font-size: 13px;
-      color: rgba(255,255,255,.92);
+      color: rgba(255, 255, 255, .92);
       white-space: nowrap;
     }
 
-    .dot{
-      width:9px;
-      height:9px;
-      border-radius:999px;
+    .dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 999px;
       background: #60a5fa;
-      box-shadow: 0 0 0 3px rgba(96,165,250,.18);
-      flex:0 0 auto;
+      box-shadow: 0 0 0 3px rgba(96, 165, 250, .18);
+      flex: 0 0 auto;
     }
 
-    .ctaRow{
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
+    .ctaRow {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
       margin-top: 14px;
     }
 
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       padding: 12px 14px;
       border-radius: 14px;
-      font-weight:800;
+      font-weight: 800;
       font-size: 14px;
-      border:1px solid rgba(255,255,255,.20);
-      background: rgba(255,255,255,.10);
+      border: 1px solid rgba(255, 255, 255, .20);
+      background: rgba(255, 255, 255, .10);
       transition: transform .06s ease, opacity .06s ease;
     }
 
-    .btn:hover{ transform: translateY(-1px); }
-
-    .btnPrimary{
-      background: linear-gradient(135deg, #60a5fa, #2563eb);
-      border: 0;
-      color:#06122a;
+    .btn:hover {
+      transform: translateY(-1px);
     }
 
-    .heroRight{ padding: 18px; }
+    .btnPrimary {
+      background: linear-gradient(135deg, #60a5fa, #2563eb);
+      border: 0;
+      color: #06122a;
+    }
 
-    .card{
-      background:#fff;
+    .heroRight {
+      padding: 18px;
+    }
+
+    .card {
+      background: #fff;
       color: var(--text);
       border-radius: 18px;
-      border:1px solid rgba(226,232,240,.9);
+      border: 1px solid rgba(226, 232, 240, .9);
       padding: 16px;
     }
 
-    .card h2{
-      margin:0 0 10px;
+    .card h2 {
+      margin: 0 0 10px;
       font-size: 14px;
-      letter-spacing:.2px;
+      letter-spacing: .2px;
       text-transform: uppercase;
-      color:#0f172a;
+      color: #0f172a;
     }
 
-    .grid{
-      display:grid;
+    .grid {
+      display: grid;
       grid-template-columns: 1fr;
-      gap:10px;
+      gap: 10px;
     }
 
-    .row{
+    .row {
       border: 1px solid var(--border);
       border-radius: 14px;
       padding: 12px 12px;
       background: #f8fafc;
     }
 
-    .label{
-      font-size:12px;
+    .label {
+      font-size: 12px;
       color: var(--muted);
-      margin-bottom:4px;
+      margin-bottom: 4px;
     }
 
-    .value{
-      font-weight:800;
-      font-size:14px;
-      color:#0f172a;
+    .value {
+      font-weight: 800;
+      font-size: 14px;
+      color: #0f172a;
     }
 
-    .note{
+    .note {
       margin-top: 12px;
       padding: 12px 12px;
       border-radius: 14px;
-      background: rgba(37,99,235,.10);
-      border: 1px solid rgba(37,99,235,.18);
-      color:#0f172a;
+      background: rgba(37, 99, 235, .10);
+      border: 1px solid rgba(37, 99, 235, .18);
+      color: #0f172a;
       font-size: 13px;
     }
 
-    .footer{
+    .footer {
       margin-top: 18px;
-      display:flex;
-      flex-wrap:wrap;
-      align-items:center;
-      justify-content:space-between;
-      gap:10px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
       padding: 14px 6px 0;
-      color: rgba(255,255,255,.85);
+      color: rgba(255, 255, 255, .85);
       font-size: 13px;
     }
 
-    .links{
-      display:flex;
-      gap:12px;
-      flex-wrap:wrap;
+    .links {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
     }
 
-    .links a{
+    .links a {
       padding: 10px 12px;
       border-radius: 999px;
-      border:1px solid rgba(255,255,255,.18);
-      background: rgba(255,255,255,.08);
-      font-weight:800;
+      border: 1px solid rgba(255, 255, 255, .18);
+      background: rgba(255, 255, 255, .08);
+      font-weight: 800;
     }
 
-    @media (max-width: 900px){
-      .hero{ grid-template-columns: 1fr; }
-      h1{ font-size: 32px; }
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: 32px;
+      }
     }
 
-    @media (max-width: 520px){
-      .heroLeft{ padding: 22px 18px; }
-      .heroRight{ padding: 14px; }
-      h1{ font-size: 28px; }
-      .btn{ width: 100%; }
+    @media (max-width: 520px) {
+      .heroLeft {
+        padding: 22px 18px;
+      }
+
+      .heroRight {
+        padding: 14px;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+
+      .btn {
+        width: 100%;
+      }
     }
   </style>
 </head>
+
 <body>
   <div class="wrap">
     <div class="topbar">
@@ -293,7 +332,8 @@
       <div class="panel heroLeft">
         <h1>Zerotonin</h1>
         <p class="sub">
-          Zerotonin is building its digital platform. We provide digital and software services, and official services will be launched soon.
+          Zerotonin is building its digital platform. We provide digital and software services, and official services
+          will be launched soon.
         </p>
 
         <div class="badges">
@@ -306,6 +346,7 @@
           <a class="btn btnPrimary" href="privacy-policy.html">View Privacy Policy</a>
           <a class="btn" href="terms-and-conditions.html">Terms &amp; Conditions</a>
           <a class="btn" href="refund-policy.html">Refund Policy</a>
+          <a class="btn" href="services.html">Services</a>
         </div>
 
         <div class="footer">
@@ -313,6 +354,7 @@
             <a href="privacy-policy.html">Privacy</a>
             <a href="terms-and-conditions.html">Terms</a>
             <a href="refund-policy.html">Refunds</a>
+            <a href="services.html">Services</a>
           </div>
           <div>© Zerotonin Innovations Private Limited</div>
         </div>
@@ -338,6 +380,10 @@
               <div class="label">Services</div>
               <div class="value">Digital &amp; Software Services</div>
             </div>
+            <div class="row">
+              <div class="label">Address</div>
+              <div class="value">Building No. 12/290 , Ettumanoor,Kottayam,Kerala,Pin : 686631</div>
+            </div>
           </div>
 
           <div class="note">
@@ -348,4 +394,5 @@
     </div>
   </div>
 </body>
+
 </html>
