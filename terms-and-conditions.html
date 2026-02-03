@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,165 +8,238 @@
   <meta name="description" content="Terms and Conditions for Zerotonin Innovations Private Limited (zerotonin.com)" />
 
   <style>
-    :root{
-      --bg1:#0b1220;
-      --bg2:#0a2a66;
-      --card:#ffffff;
-      --text:#0f172a;
-      --muted:#64748b;
-      --border:#e2e8f0;
-      --brand:#2563eb;
-      --brand2:#60a5fa;
-      --shadow: 0 18px 50px rgba(2,6,23,.35);
+    :root {
+      --bg1: #0b1220;
+      --bg2: #0a2a66;
+      --card: #ffffff;
+      --text: #0f172a;
+      --muted: #64748b;
+      --border: #e2e8f0;
+      --brand: #2563eb;
+      --brand2: #60a5fa;
+      --shadow: 0 18px 50px rgba(2, 6, 23, .35);
       --radius: 22px;
     }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Helvetica Neue", sans-serif;
-      color:#fff;
-      background:
-        radial-gradient(900px 500px at 15% 10%, rgba(96,165,250,.35), transparent 55%),
-        radial-gradient(900px 500px at 85% 20%, rgba(37,99,235,.35), transparent 60%),
-        linear-gradient(135deg, var(--bg1), var(--bg2));
-      min-height:100vh;
-    }
-    a{color:inherit; text-decoration:none}
-    a:hover{opacity:.9}
 
-    .wrap{max-width: 1080px; margin: 0 auto; padding: 34px 16px 60px;}
-    .topbar{
-      display:flex; align-items:center; justify-content:space-between; gap:12px;
+    * {
+      box-sizing: border-box
+    }
+
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Helvetica Neue", sans-serif;
+      color: #fff;
+      background:
+        radial-gradient(900px 500px at 15% 10%, rgba(96, 165, 250, .35), transparent 55%),
+        radial-gradient(900px 500px at 85% 20%, rgba(37, 99, 235, .35), transparent 60%),
+        linear-gradient(135deg, var(--bg1), var(--bg2));
+      min-height: 100vh;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none
+    }
+
+    a:hover {
+      opacity: .9
+    }
+
+    .wrap {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 34px 16px 60px;
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
       margin-bottom: 18px;
     }
-    .brand{
-      display:flex; align-items:center; gap:12px;
-      font-weight:800;
-      letter-spacing:.2px;
-    }
-    .logo{
-      width:44px; height:44px; border-radius:14px;
-      background: linear-gradient(135deg, #60a5fa, #2563eb);
-      box-shadow: 0 12px 30px rgba(37,99,235,.35);
-      position:relative;
-      flex:0 0 auto;
-    }
-    .logo:after{
-      content:""; position:absolute; inset:12px;
-      border-radius:12px; background: rgba(255,255,255,.25);
-    }
-    .brand small{
-      display:block;
-      font-weight:600;
-      opacity:.85;
-      font-size:12px;
-      margin-top:3px;
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      letter-spacing: .2px;
     }
 
-    .panel{
-      background: rgba(255,255,255,.10);
-      border: 1px solid rgba(255,255,255,.18);
+    .logo {
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, #60a5fa, #2563eb);
+      box-shadow: 0 12px 30px rgba(37, 99, 235, .35);
+      position: relative;
+      flex: 0 0 auto;
+    }
+
+    .logo:after {
+      content: "";
+      position: absolute;
+      inset: 12px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, .25);
+    }
+
+    .brand small {
+      display: block;
+      font-weight: 600;
+      opacity: .85;
+      font-size: 12px;
+      margin-top: 3px;
+    }
+
+    .panel {
+      background: rgba(255, 255, 255, .10);
+      border: 1px solid rgba(255, 255, 255, .18);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
       backdrop-filter: blur(10px);
-      overflow:hidden;
+      overflow: hidden;
     }
 
-    .hero{padding: 26px 26px 18px;}
-    h1{
-      margin:0 0 8px;
-      font-size: 32px;
-      letter-spacing:-.3px;
-      line-height:1.15;
+    .hero {
+      padding: 26px 26px 18px;
     }
-    .sub{
-      margin:0;
-      color: rgba(255,255,255,.85);
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: 32px;
+      letter-spacing: -.3px;
+      line-height: 1.15;
+    }
+
+    .sub {
+      margin: 0;
+      color: rgba(255, 255, 255, .85);
       font-size: 14px;
-      line-height:1.65;
+      line-height: 1.65;
       max-width: 75ch;
     }
 
-    .links{
-      display:flex; gap:10px; flex-wrap:wrap;
+    .links {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
       padding: 14px 26px 18px;
-      border-top:1px solid rgba(255,255,255,.14);
-    }
-    .pill{
-      padding: 10px 12px;
-      border-radius: 999px;
-      border:1px solid rgba(255,255,255,.18);
-      background: rgba(255,255,255,.08);
-      font-weight:800;
-      font-size: 13px;
-    }
-    .pill.active{
-      background: linear-gradient(135deg, #60a5fa, #2563eb);
-      color:#06122a;
-      border:0;
+      border-top: 1px solid rgba(255, 255, 255, .14);
     }
 
-    .contentWrap{padding: 18px;}
-    .card{
-      background:#fff;
+    .pill {
+      padding: 10px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, .18);
+      background: rgba(255, 255, 255, .08);
+      font-weight: 800;
+      font-size: 13px;
+    }
+
+    .pill.active {
+      background: linear-gradient(135deg, #60a5fa, #2563eb);
+      color: #06122a;
+      border: 0;
+    }
+
+    .contentWrap {
+      padding: 18px;
+    }
+
+    .card {
+      background: #fff;
       color: var(--text);
       border-radius: 18px;
-      border:1px solid rgba(226,232,240,.9);
+      border: 1px solid rgba(226, 232, 240, .9);
       padding: 18px 18px;
     }
-    h2{
+
+    h2 {
       margin: 16px 0 8px;
       font-size: 15px;
-      letter-spacing:.2px;
+      letter-spacing: .2px;
       text-transform: uppercase;
-      color:#0f172a;
+      color: #0f172a;
     }
-    p{margin: 0 0 12px; color:#0f172a; line-height:1.7}
-    ul{margin: 8px 0 12px 18px; color:#0f172a}
-    li{margin: 6px 0}
-    .note{
+
+    p {
+      margin: 0 0 12px;
+      color: #0f172a;
+      line-height: 1.7
+    }
+
+    ul {
+      margin: 8px 0 12px 18px;
+      color: #0f172a
+    }
+
+    li {
+      margin: 6px 0
+    }
+
+    .note {
       margin-top: 12px;
       padding: 12px 12px;
       border-radius: 14px;
-      background: rgba(37,99,235,.10);
-      border: 1px solid rgba(37,99,235,.18);
-      color:#0f172a;
+      background: rgba(37, 99, 235, .10);
+      border: 1px solid rgba(37, 99, 235, .18);
+      color: #0f172a;
       font-size: 13px;
     }
-    .grid{
-      display:grid;
+
+    .grid {
+      display: grid;
       grid-template-columns: 1fr 1fr;
-      gap:12px;
+      gap: 12px;
       margin-top: 10px;
     }
-    .row{
+
+    .row {
       border: 1px solid var(--border);
       border-radius: 14px;
       padding: 12px 12px;
       background: #f8fafc;
     }
-    .label{font-size:12px; color: var(--muted); margin-bottom:4px;}
-    .value{font-weight:800; font-size:14px; color:#0f172a;}
 
-    .footer{
+    .label {
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+
+    .value {
+      font-weight: 800;
+      font-size: 14px;
+      color: #0f172a;
+    }
+
+    .footer {
       margin-top: 12px;
       padding: 14px 26px 18px;
-      border-top:1px solid rgba(255,255,255,.14);
-      display:flex;
-      flex-wrap:wrap;
-      align-items:center;
-      justify-content:space-between;
-      gap:10px;
-      color: rgba(255,255,255,.85);
+      border-top: 1px solid rgba(255, 255, 255, .14);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      color: rgba(255, 255, 255, .85);
       font-size: 13px;
     }
 
-    @media (max-width: 900px){
-      h1{font-size: 28px;}
-      .grid{grid-template-columns: 1fr}
+    @media (max-width: 900px) {
+      h1 {
+        font-size: 28px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr
+      }
     }
   </style>
 </head>
+
 <body>
   <div class="wrap">
     <div class="topbar">
@@ -189,46 +263,57 @@
         <a class="pill" href="privacy-policy.html">Privacy Policy</a>
         <a class="pill active" href="terms-and-conditions.html">Terms &amp; Conditions</a>
         <a class="pill" href="refund-policy.html">Refund Policy</a>
+        <a class="pill" href="services.html">Services</a>
       </div>
 
       <div class="contentWrap">
         <div class="card">
           <p>
-            By accessing or using <b>zerotonin.com</b>, you agree to comply with and be bound by these Terms and Conditions.
+            By accessing or using <b>zerotonin.com</b>, you agree to comply with and be bound by these Terms and
+            Conditions.
           </p>
 
           <div class="note">
-            Note: The website is currently under development. Features, services, and payment options may be enabled in the future based on availability.
+            Note: The website is currently under development. Features, services, and payment options may be enabled in
+            the future based on availability.
           </div>
 
           <h2>Business Information</h2>
           <p>
-            <b>Zerotonin Innovations Private Limited</b> provides technology, digital, and innovation-driven services as described on this website.
+            <b>Zerotonin Innovations Private Limited</b> provides technology, digital, and innovation-driven services as
+            described on this website.
           </p>
 
           <h2>User Obligations</h2>
           <p>
-            You agree to provide accurate information and to use this website only for lawful purposes. You must not attempt to disrupt, misuse, or gain unauthorized access to the website or its systems.
+            You agree to provide accurate information and to use this website only for lawful purposes. You must not
+            attempt to disrupt, misuse, or gain unauthorized access to the website or its systems.
           </p>
 
           <h2>Payments</h2>
           <p>
-            Payments for services, when enabled, will be processed securely through authorized third-party payment gateways. Zerotonin Innovations Private Limited does not store card, UPI, or banking details on this website.
+            Payments for services, when enabled, will be processed securely through authorized third-party payment
+            gateways. Zerotonin Innovations Private Limited does not store card, UPI, or banking details on this
+            website.
           </p>
 
           <h2>Intellectual Property</h2>
           <p>
-            All content on this website (including text, graphics, and branding) is the property of Zerotonin Innovations Private Limited and may not be copied, reproduced, or distributed without prior written permission.
+            All content on this website (including text, graphics, and branding) is the property of Zerotonin
+            Innovations Private Limited and may not be copied, reproduced, or distributed without prior written
+            permission.
           </p>
 
           <h2>Limitation of Liability</h2>
           <p>
-            Zerotonin Innovations Private Limited shall not be held liable for any indirect, incidental, or consequential losses arising from the use of this website or services.
+            Zerotonin Innovations Private Limited shall not be held liable for any indirect, incidental, or
+            consequential losses arising from the use of this website or services.
           </p>
 
           <h2>Modifications</h2>
           <p>
-            We reserve the right to update or modify these Terms and Conditions at any time without prior notice. The latest version will always be available on this page.
+            We reserve the right to update or modify these Terms and Conditions at any time without prior notice. The
+            latest version will always be available on this page.
           </p>
 
           <h2>Contact Details</h2>
