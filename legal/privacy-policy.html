@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy | Zerotonin Innovations Private Limited</title>
+  <meta name="description" content="Privacy Policy for Zerotonin Innovations Private Limited – Zerotonin Doctor App" />
+
+  <style>
+    :root {
+      --bg1: #0b1220;
+      --bg2: #0a2a66;
+      --text: #0f172a;
+      --muted: #64748b;
+      --border: #e2e8f0;
+      --brand: #2563eb;
+      --brand2: #60a5fa;
+      --shadow: 0 18px 50px rgba(2, 6, 23, .35);
+      --radius: 22px;
+    }
+
+    * { box-sizing: border-box }
+
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Helvetica Neue", sans-serif;
+      color: #fff;
+      background:
+        radial-gradient(900px 500px at 15% 10%, rgba(96, 165, 250, .35), transparent 55%),
+        radial-gradient(900px 500px at 85% 20%, rgba(37, 99, 235, .35), transparent 60%),
+        linear-gradient(135deg, var(--bg1), var(--bg2));
+      min-height: 100vh;
+    }
+
+    a { color: inherit; text-decoration: none }
+    a:hover { opacity: .9 }
+
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 34px 16px 60px; }
+
+    .topbar {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 12px; margin-bottom: 18px;
+    }
+
+    .brand { display: flex; align-items: center; gap: 12px; font-weight: 800; letter-spacing: .2px; }
+
+    .logo {
+      width: 44px; height: 44px; border-radius: 14px;
+      background: linear-gradient(135deg, #60a5fa, #2563eb);
+      box-shadow: 0 12px 30px rgba(37, 99, 235, .35);
+      position: relative; flex: 0 0 auto;
+    }
+    .logo:after {
+      content: ""; position: absolute; inset: 12px;
+      border-radius: 12px; background: rgba(255,255,255,.25);
+    }
+
+    .brand small { display: block; font-weight: 600; opacity: .85; font-size: 12px; margin-top: 3px; }
+
+    .panel {
+      background: rgba(255,255,255,.10);
+      border: 1px solid rgba(255,255,255,.18);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(10px);
+      overflow: hidden;
+    }
+
+    .hero { padding: 26px 26px 18px; }
+
+    h1 { margin: 0 0 8px; font-size: 32px; letter-spacing: -.3px; line-height: 1.15; }
+
+    .sub { margin: 0; color: rgba(255,255,255,.85); font-size: 14px; line-height: 1.65; max-width: 75ch; }
+
+    .links {
+      display: flex; gap: 10px; flex-wrap: wrap;
+      padding: 14px 26px 18px;
+      border-top: 1px solid rgba(255,255,255,.14);
+    }
+
+    .pill {
+      padding: 10px 12px; border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.18);
+      background: rgba(255,255,255,.08);
+      font-weight: 800; font-size: 13px;
+    }
+    .pill.active {
+      background: linear-gradient(135deg, #60a5fa, #2563eb);
+      color: #06122a; border: 0;
+    }
+
+    .contentWrap { padding: 18px; }
+
+    .card {
+      background: #fff; color: var(--text);
+      border-radius: 18px;
+      border: 1px solid rgba(226,232,240,.9);
+      padding: 24px 24px;
+    }
+
+    h2 {
+      margin: 22px 0 8px; font-size: 13px; letter-spacing: .5px;
+      text-transform: uppercase; color: var(--brand); font-weight: 800;
+    }
+    h2:first-of-type { margin-top: 8px; }
+
+    h3 { margin: 14px 0 6px; font-size: 14px; color: #0f172a; font-weight: 700; }
+
+    p { margin: 0 0 12px; color: #334155; line-height: 1.75; font-size: 14px; }
+
+    ul { margin: 8px 0 12px 18px; color: #334155; }
+    li { margin: 6px 0; font-size: 14px; line-height: 1.65; }
+
+    .note {
+      padding: 14px 16px; border-radius: 14px;
+      background: rgba(37,99,235,.07);
+      border: 1px solid rgba(37,99,235,.18);
+      color: #1e3a8a; font-size: 13px; margin: 8px 0 14px;
+    }
+
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 10px; }
+
+    .row {
+      border: 1px solid var(--border); border-radius: 14px;
+      padding: 12px 14px; background: #f8fafc;
+    }
+    .label { font-size: 12px; color: var(--muted); margin-bottom: 4px; }
+    .value { font-weight: 800; font-size: 14px; color: #0f172a; }
+
+    .tag-row { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0 14px; }
+    .tag {
+      padding: 5px 10px; border-radius: 999px; font-size: 12px; font-weight: 700;
+      background: #eff6ff; color: #1d4ed8; border: 1px solid #bfdbfe;
+    }
+    .tag.green { background: #f0fdf4; color: #15803d; border-color: #bbf7d0; }
+    .tag.amber { background: #fffbeb; color: #92400e; border-color: #fde68a; }
+
+    .divider { border: none; border-top: 1px solid var(--border); margin: 20px 0; }
+
+    .footer {
+      margin-top: 12px; padding: 14px 26px 18px;
+      border-top: 1px solid rgba(255,255,255,.14);
+      display: flex; flex-wrap: wrap; align-items: center;
+      justify-content: space-between; gap: 10px;
+      color: rgba(255,255,255,.85); font-size: 13px;
+    }
+
+    @media (max-width: 900px) {
+      h1 { font-size: 26px; }
+      .grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="topbar">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          Zerotonin Innovations Private Limited
+          <small>zerotonin.com</small>
+        </div>
+      </div>
+      <a href="/" class="pill" style="display:inline-flex;">Home</a>
+    </div>
+
+    <div class="panel">
+      <div class="hero">
+        <h1>Privacy Policy</h1>
+        <p class="sub">How Zerotonin Innovations Private Limited collects, uses, and protects your personal data on the Zerotonin Doctor platform. Last updated: May 19, 2026.</p>
+      </div>
+
+      <div class="links">
+        <a class="pill active" href="privacy-policy.html">Privacy Policy</a>
+        <a class="pill" href="terms-and-conditions.html">Terms &amp; Conditions</a>
+        <a class="pill" href="deletion-policy.html">Deletion Policy</a>
+      </div>
+
+      <div class="contentWrap">
+        <div class="card">
+
+          <p>
+            At Zerotonin, we are dedicated to safeguarding your privacy. This Privacy Policy is an integral part of the
+            Zerotonin Terms of Service (ToS) and applies to all registered users, including both candidates and
+            recruiters. We may collect information, including but not limited to your personal details, when you register
+            and use our services. If you do not agree with our Privacy Policy, we recommend that you discontinue use of
+            our services immediately. Your acceptance of this Privacy Policy shall be deemed as your explicit consent for
+            us to use your personal data in the manner stated in this policy.
+          </p>
+          <p>This policy may be modified or revised from time to time and you are requested to revisit this page periodically.</p>
+
+          <h2>Our Details</h2>
+          <div class="grid">
+            <div class="row">
+              <div class="label">Data Fiduciary</div>
+              <div class="value">Zerotonin Innovations Private Limited</div>
+            </div>
+            <div class="row">
+              <div class="label">Registered Address</div>
+              <div class="value">Building No. XII/290, Kalappuravechamukalel, Ettumanur, Kottayam, Kerala, India</div>
+            </div>
+            <div class="row">
+              <div class="label">Grievance / Support</div>
+              <div class="value">support@zerotonin.com</div>
+            </div>
+            <div class="row">
+              <div class="label">General Enquiries</div>
+              <div class="value">director@zerotonin.com</div>
+            </div>
+          </div>
+
+          <hr class="divider" />
+
+          <h2>Personal Data Collected</h2>
+          <p>
+            We categorise data as <strong>Mandatory</strong> (necessary for account creation and platform use),
+            <strong>Optional</strong> (intended to improve profiles or user experience), and
+            <strong>Files/Documents</strong>. Only personal data is listed here; non-personal technical data is not
+            separately enumerated.
+          </p>
+
+          <h3>If you are a Doctor / Medical Professional (Candidate)</h3>
+
+          <p><strong>Mandatory Information</strong></p>
+          <ul>
+            <li><strong>Basic Identity:</strong> Full Name, Phone Number, Email Address</li>
+            <li>Preferred Job Specialization</li>
+            <li>Preferred Job Location</li>
+            <li>Gender</li>
+            <li>Date of Birth</li>
+            <li><strong>Employment History:</strong> Hospital/Clinic Name, Department, Designation/Role, Start Date, End Date (or "Currently employed" status)</li>
+            <li><strong>Education &amp; Qualifications:</strong> Status (Completed/Ongoing), Highest Qualification, Degree/Title, Country, Institution, Year of Completion</li>
+            <li><strong>Medical Council Registration:</strong> Registration Year, Medical Council (e.g., Medical Council of India / General Medical Council), Registration Number</li>
+            <li><strong>Job Preferences &amp; Relocation:</strong> Preferred Work Locations (Countries, States, Districts)</li>
+          </ul>
+
+          <p><strong>Optional Information</strong></p>
+          <ul>
+            <li>Clinical Skills, Research / Thesis (Title and Year of Submission)</li>
+            <li>Publications (Journal Title, Publication Title, Category, URL)</li>
+            <li>Presentations (Type, Level, Conference/Event Title, Year)</li>
+            <li>Achievements: Prizes, Awards, Ranks</li>
+            <li>Management &amp; Leadership Experience</li>
+            <li>Teaching Experience</li>
+          </ul>
+
+          <p><strong>Files Required &amp; Generated</strong></p>
+          <ul>
+            <li><strong>Certificates:</strong> Verification documents classified as REGISTRATION, DEGREE, or OTHER (file metadata: original name, MIME type, size)</li>
+            <li><strong>Dynamic Resumes:</strong> CVs generated in PDF format upon request; downloads are protected by strict <code>no-store</code> cache-control headers</li>
+            <li><strong>Profile Photo</strong></li>
+          </ul>
+
+          <h3>If you are a Recruiter (Hospital / Clinic)</h3>
+          <p>
+            We collect only the minimum personal data of your authorised user(s) for registration: Full Name, Work Email,
+            Mobile Number, Designation, and Profile Photo.
+          </p>
+
+          <hr class="divider" />
+
+          <h2>Purpose of Processing Personal Data</h2>
+          <p>We process personal data only for the following purposes:</p>
+          <ul>
+            <li>Creating and managing user accounts</li>
+            <li>Verifying user identity and contact information (Two-Factor Authentication via SMS OTPs)</li>
+            <li>Enabling job discovery, applications, and recruitment communication</li>
+            <li>Displaying professional profiles to relevant, verified users</li>
+            <li>Sending essential service communications (login, security, application-related notifications)</li>
+            <li>Maintaining platform security and preventing misuse</li>
+            <li>Building reputable Employer Profiles visible to the medical community (for hospitals)</li>
+            <li>Internal admin vetting and approval of healthcare organisations</li>
+          </ul>
+          <div class="note">
+            Recruiter-visible data (name, contact details) is shared with recruiters only when a Doctor applies for a
+            role or opts to be discoverable. If you are a registered user of a recruiter, your personal data will not be
+            shared with candidates unless approved by you.
+          </div>
+
+          <hr class="divider" />
+
+          <h2>Data Sharing</h2>
+          <p>We do not sell user data. Data is shared only to facilitate the functioning of the platform.</p>
+
+          <h3>Between Platform Users</h3>
+          <p>
+            When a Doctor applies for a role or opts to be discoverable, their professional personal data (profile
+            details, qualifications, experience, and contact details) becomes visible to the relevant verified recruiter.
+          </p>
+
+          <h3>With Third-Party Service Providers</h3>
+          <p>We transmit the minimum data necessary for each provider to perform their function:</p>
+          <ul>
+            <li><strong>AWS SES (Amazon Simple Email Service):</strong> Receives email addresses to deliver OTPs, password reset links, and platform notifications.</li>
+            <li><strong>MSG91:</strong> Receives Indian mobile numbers to dispatch SMS OTP messages for phone verification.</li>
+            <li><strong>AWS S3:</strong> Secure cloud storage for document uploads (logos, verification PDFs, registration certificates).</li>
+            <li><strong>MongoDB:</strong> Primary database service where all structured platform data securely resides.</li>
+          </ul>
+
+          <hr class="divider" />
+
+          <h2>Safety and Security Measures</h2>
+          <ul>
+            <li><strong>Robust Password Protection:</strong> All passwords are encrypted using the bcrypt hashing algorithm with secure salts. Passwords are never stored in plaintext.</li>
+            <li><strong>Data Integrity &amp; Transport:</strong> Authentication relies on time-bound, stateless JSON Web Tokens (JWT) tied to the user's granular role permissions.</li>
+            <li><strong>Secure OTP Policies:</strong> OTPs are randomly generated and securely hashed. Protected against brute-force by a 10-minute expiry, 60-second cooldown, and a maximum of 5 failed attempts before temporary lockout.</li>
+            <li><strong>Strict File Upload Boundaries:</strong> Only .png, .jpg, and .pdf files are accepted (strict MIME-type allowlists), with a maximum 10 MB size limit.</li>
+            <li><strong>Audit Logging &amp; Tracing:</strong> Critical security actions (login attempts, password resets, token generation) are persistently logged with actor details and IPs.</li>
+            <li><strong>Fail-Closed Architecture:</strong> Security tokens and hashes are intentionally stripped from all client-facing API payloads.</li>
+          </ul>
+
+          <hr class="divider" />
+
+          <h2>Data Retention</h2>
+          <p>Personal data is retained only for as long as:</p>
+          <ul>
+            <li>The user account remains active, or</li>
+            <li>The data is required for recruitment-related services, or</li>
+            <li>Retention is required by applicable law</li>
+          </ul>
+          <p>Users may request deletion or correction of their personal data, subject to legal obligations. See our <a href="deletion-policy.html" style="color:#2563eb; text-decoration:underline;">Deletion Policy</a> for full details on how account deletion and data anonymisation works.</p>
+
+          <hr class="divider" />
+
+          <h2>Your Rights</h2>
+          <p>Depending on applicable law, you may have the right to:</p>
+          <ul>
+            <li>Access your personal data</li>
+            <li>Correct inaccurate or incomplete personal data</li>
+            <li>Request deletion of your personal data</li>
+            <li>Withdraw consent where applicable</li>
+            <li>Raise grievances regarding personal data processing</li>
+          </ul>
+          <div class="note">
+            Requests can be directed to <strong>support@zerotonin.com</strong>. Please note that we may not be able to
+            provide our services if you opt for deletion of your personal data or withdraw your consent.
+          </div>
+
+          <p style="margin-top: 16px; color: #64748b; font-size: 12px;">
+            Last updated: May 19, 2026. We may update this policy from time to time. Continued use of the platform
+            indicates acceptance of the updated policy.
+          </p>
+
+        </div>
+      </div>
+
+      <div class="footer">
+        <div>&copy; Zerotonin Innovations Private Limited</div>
+        <div>Privacy Policy</div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Account Deletion Policy | Zerotonin Innovations Private Limited</title>
+  <meta name="description" content="Account Deletion Policy for the Zerotonin Doctor App – Zerotonin Innovations Private Limited" />
+
+  <style>
+    :root {
+      --bg1: #0b1220;
+      --bg2: #0a2a66;
+      --text: #0f172a;
+      --muted: #64748b;
+      --border: #e2e8f0;
+      --brand: #2563eb;
+      --brand2: #60a5fa;
+      --shadow: 0 18px 50px rgba(2, 6, 23, .35);
+      --radius: 22px;
+    }
+
+    * { box-sizing: border-box }
+
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Helvetica Neue", sans-serif;
+      color: #fff;
+      background:
+        radial-gradient(900px 500px at 15% 10%, rgba(96, 165, 250, .35), transparent 55%),
+        radial-gradient(900px 500px at 85% 20%, rgba(37, 99, 235, .35), transparent 60%),
+        linear-gradient(135deg, var(--bg1), var(--bg2));
+      min-height: 100vh;
+    }
+
+    a { color: inherit; text-decoration: none }
+    a:hover { opacity: .9 }
+
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 34px 16px 60px; }
+
+    .topbar {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 12px; margin-bottom: 18px;
+    }
+
+    .brand { display: flex; align-items: center; gap: 12px; font-weight: 800; letter-spacing: .2px; }
+
+    .logo {
+      width: 44px; height: 44px; border-radius: 14px;
+      background: linear-gradient(135deg, #60a5fa, #2563eb);
+      box-shadow: 0 12px 30px rgba(37, 99, 235, .35);
+      position: relative; flex: 0 0 auto;
+    }
+    .logo:after {
+      content: ""; position: absolute; inset: 12px;
+      border-radius: 12px; background: rgba(255,255,255,.25);
+    }
+
+    .brand small { display: block; font-weight: 600; opacity: .85; font-size: 12px; margin-top: 3px; }
+
+    .panel {
+      background: rgba(255,255,255,.10);
+      border: 1px solid rgba(255,255,255,.18);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(10px);
+      overflow: hidden;
+    }
+
+    .hero { padding: 26px 26px 18px; }
+
+    h1 { margin: 0 0 8px; font-size: 32px; letter-spacing: -.3px; line-height: 1.15; }
+
+    .sub { margin: 0; color: rgba(255,255,255,.85); font-size: 14px; line-height: 1.65; max-width: 75ch; }
+
+    .links {
+      display: flex; gap: 10px; flex-wrap: wrap;
+      padding: 14px 26px 18px;
+      border-top: 1px solid rgba(255,255,255,.14);
+    }
+
+    .pill {
+      padding: 10px 12px; border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.18);
+      background: rgba(255,255,255,.08);
+      font-weight: 800; font-size: 13px;
+    }
+    .pill.active {
+      background: linear-gradient(135deg, #60a5fa, #2563eb);
+      color: #06122a; border: 0;
+    }
+
+    .contentWrap { padding: 18px; }
+
+    .card {
+      background: #fff; color: var(--text);
+      border-radius: 18px;
+      border: 1px solid rgba(226,232,240,.9);
+      padding: 24px 24px;
+    }
+
+    h2 {
+      margin: 22px 0 8px; font-size: 13px; letter-spacing: .5px;
+      text-transform: uppercase; color: var(--brand); font-weight: 800;
+    }
+    h2:first-of-type { margin-top: 8px; }
+
+    h3 { margin: 14px 0 6px; font-size: 14px; color: #0f172a; font-weight: 700; }
+
+    p { margin: 0 0 12px; color: #334155; line-height: 1.75; font-size: 14px; }
+
+    ul { margin: 8px 0 12px 18px; color: #334155; }
+    li { margin: 6px 0; font-size: 14px; line-height: 1.65; }
+
+    ol { margin: 8px 0 12px 18px; color: #334155; }
+    ol li { margin: 8px 0; font-size: 14px; line-height: 1.65; }
+
+    .note {
+      padding: 14px 16px; border-radius: 14px;
+      background: rgba(37,99,235,.07);
+      border: 1px solid rgba(37,99,235,.18);
+      color: #1e3a8a; font-size: 13px; margin: 8px 0 14px;
+    }
+
+    .warn {
+      padding: 14px 16px; border-radius: 14px;
+      background: #fff7ed;
+      border: 1px solid #fed7aa;
+      color: #7c2d12; font-size: 13px; margin: 8px 0 14px;
+    }
+
+    /* Timeline */
+    .timeline {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 0 16px;
+      margin: 14px 0;
+    }
+    .tl-marker {
+      display: flex; flex-direction: column; align-items: center;
+    }
+    .tl-dot {
+      width: 12px; height: 12px; border-radius: 50%;
+      background: var(--brand); flex: 0 0 auto; margin-top: 3px;
+    }
+    .tl-line {
+      width: 2px; flex: 1; background: #bfdbfe; margin: 4px 0;
+    }
+    .tl-row { padding-bottom: 16px; }
+    .tl-day { font-size: 12px; font-weight: 800; color: var(--brand); margin-bottom: 2px; }
+    .tl-desc { font-size: 13px; color: #334155; line-height: 1.6; }
+
+    /* Data treatment table */
+    .data-table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+    .data-table th {
+      padding: 10px 14px; text-align: left;
+      background: #f1f5f9; color: #0f172a; font-weight: 800;
+      border: 1px solid var(--border);
+    }
+    .data-table td {
+      padding: 10px 14px; vertical-align: top;
+      border: 1px solid var(--border); color: #334155; line-height: 1.65;
+    }
+    .data-table tr:first-child th:first-child { border-radius: 10px 0 0 0; }
+    .data-table tr:first-child th:last-child  { border-radius: 0 10px 0 0; }
+    .badge {
+      display: inline-block; padding: 3px 10px; border-radius: 999px;
+      font-size: 11px; font-weight: 800; letter-spacing: .4px;
+    }
+    .badge-red   { background: #fee2e2; color: #991b1b; }
+    .badge-amber { background: #fef9c3; color: #713f12; }
+    .badge-green { background: #dcfce7; color: #14532d; }
+
+    .steps {
+      counter-reset: step;
+      list-style: none;
+      margin: 8px 0 14px;
+      padding: 0;
+    }
+    .steps li {
+      counter-increment: step;
+      display: flex; align-items: flex-start; gap: 12px;
+      padding: 10px 0; border-bottom: 1px solid var(--border);
+      font-size: 14px; color: #334155;
+    }
+    .steps li:last-child { border-bottom: none; }
+    .steps li::before {
+      content: counter(step);
+      min-width: 26px; height: 26px;
+      border-radius: 50%; background: #eff6ff;
+      color: var(--brand); font-weight: 800; font-size: 13px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 10px; }
+    .row {
+      border: 1px solid var(--border); border-radius: 14px;
+      padding: 12px 14px; background: #f8fafc;
+    }
+    .label { font-size: 12px; color: var(--muted); margin-bottom: 4px; }
+    .value { font-weight: 800; font-size: 14px; color: #0f172a; }
+
+    .divider { border: none; border-top: 1px solid var(--border); margin: 20px 0; }
+
+    .footer {
+      margin-top: 12px; padding: 14px 26px 18px;
+      border-top: 1px solid rgba(255,255,255,.14);
+      display: flex; flex-wrap: wrap; align-items: center;
+      justify-content: space-between; gap: 10px;
+      color: rgba(255,255,255,.85); font-size: 13px;
+    }
+
+    @media (max-width: 900px) {
+      h1 { font-size: 26px; }
+      .grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="topbar">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          Zerotonin Innovations Private Limited
+          <small>zerotonin.com</small>
+        </div>
+      </div>
+      <a href="/" class="pill" style="display:inline-flex;">Home</a>
+    </div>
+
+    <div class="panel">
+      <div class="hero">
+        <h1>Account Deletion Policy</h1>
+        <p class="sub">Applies to: Doctors using the Zerotonin platform &nbsp;·&nbsp; Contact: support@zerotonin.com</p>
+      </div>
+
+      <div class="links">
+        <a class="pill" href="privacy-policy.html">Privacy Policy</a>
+        <a class="pill" href="terms-and-conditions.html">Terms &amp; Conditions</a>
+        <a class="pill active" href="deletion-policy.html">Deletion Policy</a>
+      </div>
+
+      <div class="contentWrap">
+        <div class="card">
+
+          <h2>Overview</h2>
+          <p>
+            You may request deletion of your Zerotonin account at any time through the app. Once submitted, your
+            account enters a <strong>30-day grace period</strong> before permanent, irreversible anonymisation. You may
+            cancel at any time during this period.
+          </p>
+
+          <div class="timeline">
+            <div class="tl-marker"><div class="tl-dot"></div><div class="tl-line"></div></div>
+            <div class="tl-row">
+              <div class="tl-day">Day 0</div>
+              <div class="tl-desc">Deletion request submitted — account marked, all activity restricted.</div>
+            </div>
+
+            <div class="tl-marker"><div class="tl-dot"></div><div class="tl-line"></div></div>
+            <div class="tl-row">
+              <div class="tl-day">Days 1 – 29</div>
+              <div class="tl-desc">Grace period active — you may log in only to cancel the request.</div>
+            </div>
+
+            <div class="tl-marker"><div class="tl-dot"></div><div class="tl-line"></div></div>
+            <div class="tl-row">
+              <div class="tl-day">Pre-deletion</div>
+              <div class="tl-desc">Notification sent (email or in-app) reminding you deletion is imminent.</div>
+            </div>
+
+            <div class="tl-marker"><div class="tl-dot" style="background:#dc2626;"></div></div>
+            <div class="tl-row">
+              <div class="tl-day" style="color:#dc2626;">Day 30+</div>
+              <div class="tl-desc">Irreversible automated anonymisation — account cannot be recovered.</div>
+            </div>
+          </div>
+
+          <hr class="divider" />
+
+          <h2>How to Delete Your Account</h2>
+          <p>To initiate account deletion from within the app:</p>
+          <ol class="steps">
+            <li>Open the Zerotonin app</li>
+            <li>Navigate to <strong>Settings &rarr; Account Actions &rarr; Delete Account</strong></li>
+            <li>Enter the reason for deletion and confirm by clicking <strong>"Confirm"</strong></li>
+          </ol>
+          <p>Your deletion request is recorded immediately upon submission.</p>
+
+          <hr class="divider" />
+
+          <h2>What Happens After You Request Deletion</h2>
+
+          <h3>During the 30-Day Grace Period</h3>
+          <p>
+            Your account is marked for deletion but remains accessible. You may log in only to cancel. All of the
+            following are restricted during this period:
+          </p>
+          <ul>
+            <li>Viewing jobs</li>
+            <li>Applying for jobs</li>
+            <li>Updating your profile</li>
+            <li>Being contacted by healthcare organisations</li>
+            <li>Visibility to recruiters or hospitals</li>
+          </ul>
+
+          <h3>After 30 Days</h3>
+          <div class="warn">
+            If the deletion request is not cancelled within the grace period, your account undergoes
+            <strong>irreversible anonymisation</strong>. This process is automated and cannot be undone.
+          </div>
+
+          <hr class="divider" />
+
+          <h2>What Happens to Your Data</h2>
+          <p>The table below outlines how each category of your data is treated following account deletion.</p>
+
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Treatment</th>
+                <th>Data Items</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="badge badge-red">DELETED</span></td>
+                <td>
+                  Profile photo<br>
+                  CV and uploaded documents<br>
+                  Certificates and attachments<br>
+                  Push notification tokens<br>
+                  Active login sessions
+                </td>
+              </tr>
+              <tr>
+                <td><span class="badge badge-amber">ANONYMISED</span></td>
+                <td>
+                  Name &rarr; replaced with "Deleted User"<br>
+                  Email &rarr; anonymised, non-functional format<br>
+                  Phone number &rarr; removed or masked<br>
+                  Password &rarr; randomised (login disabled)<br>
+                  Profile details &rarr; cleared<br>
+                  Verification status &rarr; reset
+                </td>
+              </tr>
+              <tr>
+                <td><span class="badge badge-green">RETAINED</span></td>
+                <td>
+                  Job application records — for healthcare compliance (identity removed)<br>
+                  Audit logs — legal/compliance purposes, no recoverable personal data<br>
+                  Financial or transaction records — as required by applicable law
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="note">
+            Once anonymised, data cannot be linked back to you in any form.
+          </div>
+
+          <hr class="divider" />
+
+          <h2>Cancelling Your Deletion Request</h2>
+          <p>
+            You may cancel your deletion request at any time within the 30-day grace period by logging in to your
+            account. Your account will be fully restored. After anonymisation has occurred, recovery is not possible.
+          </p>
+
+          <hr class="divider" />
+
+          <h2>Administrative Holds</h2>
+          <p>
+            In limited circumstances, Zerotonin may temporarily pause a deletion request, including:
+          </p>
+          <ul>
+            <li>Legal or regulatory obligations</li>
+            <li>Ongoing investigations (fraud or misuse)</li>
+            <li>Outstanding contractual or financial matters</li>
+          </ul>
+          <p>
+            During this period, the deletion timeline is paused and resumes automatically once the hold is lifted.
+          </p>
+
+          <hr class="divider" />
+
+          <h2>If You Cannot Access Your Account</h2>
+          <p>
+            If you are unable to access your account, you may request deletion by contacting us directly. You may be
+            required to verify your identity before the request is processed.
+          </p>
+          <div class="grid">
+            <div class="row">
+              <div class="label">Support Email</div>
+              <div class="value">support@zerotonin.com</div>
+            </div>
+          </div>
+
+          <hr class="divider" />
+
+          <h2>Your Data Rights</h2>
+          <p>You may exercise the following rights at any time by contacting <strong>support@zerotonin.com</strong>:</p>
+          <ul>
+            <li>Request deletion of your personal data</li>
+            <li>Request access to your data</li>
+            <li>Request correction of inaccurate data</li>
+          </ul>
+
+          <hr class="divider" />
+
+          <h2>Re-Registration After Deletion</h2>
+          <p>You may create a new account after deletion. However:</p>
+          <ul>
+            <li>Your previous data cannot be restored</li>
+            <li>Your new account is treated independently</li>
+            <li>Historical records remain anonymised</li>
+          </ul>
+
+          <hr class="divider" />
+
+          <h2>Changes to This Policy</h2>
+          <p>We may update this policy from time to time. Changes will be communicated via:</p>
+          <ul>
+            <li>In-app notifications</li>
+            <li>Email communication</li>
+            <li>Updated effective date on this document</li>
+          </ul>
+
+          <p style="margin-top: 16px; color: #64748b; font-size: 12px;">
+            Last updated: May 19, 2026. For questions, contact support@zerotonin.com
+          </p>
+
+        </div>
+      </div>
+
+      <div class="footer">
+        <div>&copy; Zerotonin Innovations Private Limited</div>
+        <div>Account Deletion Policy</div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
