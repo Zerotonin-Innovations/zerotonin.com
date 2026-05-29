@@ -8,6 +8,10 @@
   <meta name="description" content="Terms of Service for the Zerotonin Doctor App – Zerotonin Innovations Private Limited" />
 
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
     :root {
       --bg1: #0b1220;
       --bg2: #0a2a66;
@@ -100,15 +104,17 @@
     }
 
     h2 {
-      margin: 22px 0 8px; font-size: 13px; letter-spacing: .5px;
+      margin: 28px 0 10px; font-size: 14px; letter-spacing: .5px;
       text-transform: uppercase; color: var(--brand); font-weight: 800;
+      scroll-margin-top: 24px;
     }
     h2:first-of-type { margin-top: 8px; }
 
-    p { margin: 0 0 12px; color: #334155; line-height: 1.75; font-size: 14px; }
+    p { margin: 0 0 14px; color: #334155; line-height: 1.75; font-size: 14px; }
 
-    ul { margin: 8px 0 12px 18px; color: #334155; }
-    li { margin: 6px 0; font-size: 14px; line-height: 1.65; }
+    ul, ol { margin: 8px 0 14px 22px; color: #334155; padding-left: 0; }
+    li { margin: 8px 0; font-size: 14px; line-height: 1.75; }
+    li::marker { color: var(--brand); font-weight: 700; }
 
     .note {
       padding: 14px 16px; border-radius: 14px;
@@ -128,6 +134,44 @@
       font-size: 13px; color: #334155; line-height: 1.75;
       background: #f8fafc; border: 1px solid var(--border);
       border-radius: 14px; padding: 14px 16px; margin: 8px 0 14px;
+    }
+
+    /* Table of Contents Styles */
+    .toc-container {
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px;
+      margin-bottom: 24px;
+    }
+    .toc-title {
+      font-size: 13px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .5px;
+      color: var(--brand);
+      margin-bottom: 12px;
+    }
+    .toc-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px 24px;
+    }
+    .toc-link {
+      font-size: 13.5px;
+      color: #475569;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+    }
+    .toc-link span {
+      font-weight: 700;
+      color: var(--brand);
+    }
+    .toc-link:hover {
+      color: var(--brand);
+      transform: translateX(4px);
     }
 
     .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 10px; }
@@ -152,6 +196,12 @@
     @media (max-width: 900px) {
       h1 { font-size: 26px; }
       .grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 768px) {
+      .toc-grid {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
     }
   </style>
 </head>
@@ -185,231 +235,220 @@
         <div class="card">
 
           <p>
-            By accessing or using the services described below, you acknowledge that you have read, understood, and
-            accepted these Terms of Service (<strong>ToS</strong>). If you disagree with any provision, please refrain
-            from registering or utilising our services. Upon clicking "I Agree," a legally binding contract is
-            established between you and us, and you will be subject to these terms until expiration or termination.
+            By accessing or using the services described below, you acknowledge that you have read, understood, and accepted these Terms of Service (<strong>ToS</strong>). If you disagree with any provision in this ToS, please refrain from registering or utilizing our services. Your registration signifies your acceptance of all terms outlined herein. Upon clicking “I Agree,” a legally binding contract is established between you and us, and you will be subject to these terms until expiration or termination.
           </p>
 
           <div class="note">
-            The terms <strong>"Zerotonin"</strong>, <strong>"Application"</strong>, <strong>"We"</strong>,
-            <strong>"Us"</strong>, and <strong>"Our"</strong> refer to <strong>Zerotonin Innovations Private
-            Limited</strong>, having its registered office at Building No. XII/290, Kalappuravechamukalel, Ettumanur,
-            Kottayam, Kerala, India. The terms <strong>"You"</strong>, <strong>"Yours"</strong>, and
-            <strong>"User"</strong> indicate a registered medical practitioner who has signed up with Zerotonin as an
-            individual job seeker. The term <strong>"Recruiter"</strong> refers to hospitals and clinics registered with
-            Zerotonin as recruiters.
+            The terms <strong>“Zerotonin”</strong>, <strong>“Application”</strong>, <strong>“We”</strong>, <strong>“Us”</strong>, and <strong>“Our”</strong> refer to <strong>Zerotonin Innovations Private Limited</strong> having its registered office at building no XII/290, Ettumanoor, Kottayam, Kerala - 686631. The terms <strong>“You”</strong>, <strong>“yours”</strong>, and <strong>“User”</strong> indicate a registered medical practitioner who has signed up with Zerotonin as an individual job seeker. The term <strong>“Recruiter”</strong> refers to hospitals, clinic, diagnostic centers, wellness centers and other healthcare organisations registered with Zerotonin as recruiters.
           </div>
 
           <hr class="divider" />
 
-          <h2>Applicability</h2>
+          <!-- Table of Contents -->
+          <div class="toc-container">
+            <div class="toc-title">Table of Contents</div>
+            <div class="toc-grid">
+              <a href="#applicability" class="toc-link"><span>1.</span> Applicability</a>
+              <a href="#eligibility" class="toc-link"><span>2.</span> Eligibility, Registration &amp; Account</a>
+              <a href="#services" class="toc-link"><span>3.</span> Services</a>
+              <a href="#obligations" class="toc-link"><span>4.</span> User Obligations</a>
+              <a href="#privacy" class="toc-link"><span>5.</span> Privacy &amp; Data Use</a>
+              <a href="#interactions" class="toc-link"><span>6.</span> Interactions &amp; Third Parties</a>
+              <a href="#property" class="toc-link"><span>7.</span> Intellectual Property</a>
+              <a href="#thirdparty" class="toc-link"><span>8.</span> Third Party Services</a>
+              <a href="#disclaimers" class="toc-link"><span>9.</span> Disclaimers</a>
+              <a href="#liability" class="toc-link"><span>10.</span> Limitation of Liability</a>
+              <a href="#indemnity" class="toc-link"><span>11.</span> Indemnity</a>
+              <a href="#suspension" class="toc-link"><span>12.</span> Suspension &amp; Termination</a>
+              <a href="#governing-law" class="toc-link"><span>13.</span> Governing Law &amp; Jurisdiction</a>
+              <a href="#changes" class="toc-link"><span>14.</span> Changes to These Terms</a>
+            </div>
+          </div>
+
+          <hr class="divider" />
+
+          <h2 id="applicability">1. Applicability</h2>
           <p>
-            All terms and conditions and policies — including the Privacy Policy, Disclaimers, and any other terms of
-            usage incorporated by reference — constitute the terms of your usage of the Service and form part of this
-            ToS. By registering with Zerotonin and/or utilising its services, you unconditionally agree to be bound by
-            this ToS in its entirety. Use of the Services shall be deemed acceptance of the terms.
+            <strong>1.1.</strong> All the terms and conditions and policies including the Privacy Policy, Disclaimers and any other terms of usage included as a reference herein constitutes the terms of Your usage of the Service and forms part of this ToS.
+          </p>
+          <p>
+            <strong>1.2.</strong> By registering with Zerotonin and/or utilising its services, you hereby unconditionally agree to be bound by this ToS and all the terms herein including the policies, disclaimers etc., which are incorporated herein by way of reference and if you do not agree to any of the terms, you shall not use the Services. Use of the Services shall be deemed acceptance of the terms.
           </p>
 
           <hr class="divider" />
 
-          <h2>Eligibility, Registration and User Account</h2>
+          <h2 id="eligibility">2. Eligibility, Registration and User Account</h2>
           <p>
-            Registration is required to access and use the Services. At present, the Services are offered to Users at
-            no charge; however, we reserve the right to introduce fees in the future, with prior notice.
+            <strong>2.1.</strong> Registration is required to access and use the Services. At present, the Services are offered to Users at no charge; however, we reserve the right to introduce fees in the future, in which case we will provide prior notice to you.
           </p>
-          <p>You represent and warrant that you are:</p>
-          <ul>
+          <p>
+            <strong>2.2.</strong> You represent and warrant that you are:
+          </p>
+          <ol type="a">
             <li>An Indian citizen or a foreign individual having the required permits to work in India legally;</li>
             <li>18 years of age or above and eligible for entering into a contract as per the Indian Contract Act, 1872;</li>
-            <li>A registered medical practitioner (under the Indian Medical Council); and</li>
-            <li>That all information you provide during registration and while using the services is accurate, complete, and up to date.</li>
-          </ul>
+            <li>A registered medical practitioner (under the Indian Medical Council) and that all information you provide during registration and while using the services (including name, qualifications, registration details, experience, and contact information) is accurate, complete, and up to date.</li>
+          </ol>
           <p>
-            You are responsible for maintaining the confidentiality of your account credentials and for all activities
-            carried out through your account. You agree to notify us promptly if you suspect any unauthorised use of
-            your account.
+            <strong>2.3.</strong> You are responsible for maintaining the confidentiality of your account credentials and for all activities carried out through your account. You agree to notify us promptly if you suspect any unauthorized use of your account.
           </p>
 
           <hr class="divider" />
 
-          <h2>Services</h2>
+          <h2 id="services">3. Services</h2>
           <p>
-            Zerotonin provides a technology platform that facilitates connections between Users (individual doctors
-            seeking employment or professional engagements) and Recruiters (hospitals, clinics, and other healthcare
-            establishments) by enabling Recruiters to publish opportunities and enabling Users to view, apply for, or
-            express interest in such opportunities.
+            <strong>3.1.</strong> Zerotonin provides a technology platform that facilitates connections between Users (individual doctors seeking employment or professional engagements) and Recruiters (hospitals, clinics, and other healthcare establishments) by enabling Recruiters to publish opportunities and enabling Users to view, apply for, or express interest in such opportunities.
           </p>
           <p>
-            Zerotonin is not a recruitment agency, does not act as an agent for any User or Recruiter, and is not a
-            party to any employment, consultancy, locum, or other engagement arrangement that may be entered into
-            between a User and a Recruiter. Hiring decisions, negotiations, and contractual arrangements are solely
-            between Users and Recruiters.
+            <strong>3.2.</strong> Zerotonin is not a recruitment agency, does not act as an agent for any User or Recruiter, and is not a party to any employment, consultancy, locum, or other engagement arrangement that may be entered into between a User and a Recruiter. Hiring decisions, negotiations, and contractual arrangements are solely between Users and Recruiters.
           </p>
-          <div class="warn">
-            No job or engagement is guaranteed. We do not guarantee that you will receive interview calls, offers,
-            engagements, responses, or any particular outcomes through the use of the platform. You agree to
-            independently verify the identity, credentials, terms, and legitimacy of any Recruiter and opportunity
-            before sharing sensitive information, attending interviews, travelling, making payments, or entering into
-            any arrangement.
-          </div>
-
-          <hr class="divider" />
-
-          <h2>User Obligations</h2>
-          <p>You agree to:</p>
-          <ul>
-            <li>Provide accurate and current information in your profile and applications; not impersonate any person or misrepresent your identity, qualifications, registrations, or experience;</li>
-            <li>Use the platform only for lawful job-seeking and professional networking purposes;</li>
-            <li>Maintain professional conduct in communications with Recruiters;</li>
-            <li>Comply with all applicable medical council/board rules, professional standards, employment laws, and any other applicable laws;</li>
-            <li>Keep your contact information updated so Recruiters may reach you.</li>
-          </ul>
-          <p>You unconditionally agree that you will not post or transmit:</p>
-          <ul>
-            <li>Any content containing profanity, or that is false, inaccurate, or misleading;</li>
-            <li>Any material containing viruses or other malicious/harmful codes, or disruptive components;</li>
-            <li>Content constituting cyber bullying, spam, junk, defamatory, abusive, hateful, racist, sexist, harassing, threatening, obscene, pornographic, or otherwise unlawful material;</li>
-            <li>Content infringing or misappropriating any third party's copyright, patent, trademark, trade secret, or other proprietary rights;</li>
-            <li>Content violating the privacy, publicity, or other rights of any party;</li>
-            <li>Content containing advertisements, solicitations, or links to illegal activities (including money laundering, gambling, etc.);</li>
-            <li>Content that hurts religious sentiments or instigates hatred between communities or threatens the unity and integrity of India;</li>
-            <li>Any content that violates any applicable law or statute.</li>
-          </ul>
-          <p>You shall not:</p>
-          <ul>
-            <li>Access, tamper with, or penetrate our servers, computers, or third-party service provider systems;</li>
-            <li>Probe, scan, or test the vulnerability of any system or network or breach any security or authentication measures;</li>
-            <li>Interfere with or disrupt the access of any other User, including by sending viruses, overloading, flooding, or spamming the services;</li>
-            <li>Attempt to duplicate Zerotonin by reverse engineering or any other method;</li>
-            <li>Share or lease your account to third parties.</li>
-          </ul>
-
-          <hr class="divider" />
-
-          <h2>Privacy and Data Use</h2>
           <p>
-            Your use of the platform is subject to our <a href="privacy-policy.html" style="color:#2563eb; text-decoration:underline;">Privacy Policy</a>,
-            which explains how we collect, use, store, and share personal data. By using the platform, you consent to
-            the processing of your information as described therein, including sharing your profile and application
-            details with Recruiters when you apply or choose to share such information.
+            <strong>3.3.</strong> Zerotonin may publish job listings under its own name for healthcare organisations that are not registered on the platform. In these instances, Zerotonin functions as a recruitment partner, supporting the application process and coordinating communication between doctors and the respective health care recruiting teams.
+          </p>
+          <p>
+            <strong>3.4.</strong> Zerotonin operates solely as an intermediary technology platform that connects Recruiters and Users. The Application uses automated tools to compare the requirements specified in Recruiter postings with the information provided in a User’s profile and preferences and may display on the User’s dashboard those opportunities that appear to match such requirements, enabling the User to apply to Recruiters through the Application. Zerotonin is not a recruitment or placement agency and does not participate in, control, or guarantee any hiring or engagement outcome.
+          </p>
+          <p>
+            <strong>3.5.</strong> No job or engagement is guaranteed. We do not guarantee that you will receive interview calls, offers, engagements, responses, or any particular outcomes through the use of the platform.
+          </p>
+          <p>
+            <strong>3.6.</strong> Recruiters are responsible for the content and accuracy of their job postings communications and facilities with the Recruiter. While Zerotonin may carry out a cursory verification of certain Recruiters (which may include basic checks of identity, registration details, contact information, or facility information), such verification is limited and does not constitute an endorsement or certification of the Recruiter.
+          </p>
+          <p>
+            <strong>3.7.</strong> We do not guarantee that job postings, Recruiter profiles, messages, or opportunities available through the platform are genuine, accurate, lawful, or free from misrepresentation, and we do not guarantee that any posting is not fake or fraudulent. You agree to independently verify the identity, credentials, terms, and legitimacy of any Recruiter and any opportunity before sharing sensitive information, attending interviews, travelling, making payments, or entering into any arrangement.
+          </p>
+          <p>
+            <strong>3.8.</strong> Zerotonin does not verify, warrant, or guarantee that any job listing—whether locum or permanent—complies with applicable legal or regulatory requirements, including but not limited to PCPNDT compliance and other statutory obligations. When you applying to or accept roles through our platform, you acknowledge and agree that you are solely responsible for independently verifying all legal, regulatory, and professional requirements before accepting any position, and for ensuring you own eligibility to undertake such roles.
           </p>
 
           <hr class="divider" />
 
-          <h2>Interactions with Recruiters and Third Parties</h2>
+          <h2 id="obligations">4. User Obligations</h2>
           <p>
-            Any interactions, interviews, negotiations, background checks, credentialing, payments, travel, and
-            agreements are strictly between you and the Recruiter (or other third parties). Zerotonin is not
-            responsible for any disputes, claims, losses, or damages arising from such interactions. You are strongly
-            advised not to make any payments to any Recruiter or third party without verifying legitimacy and receiving
-            proper documentation.
+            <strong>4.1.</strong> You agree to:
+          </p>
+          <ol type="a">
+            <li>provide accurate and current information in your profile and applications; and not to impersonate any person or misrepresent your identity, qualifications, registrations, or experience;</li>
+            <li>use the platform only for lawful job-seeking and professional networking purposes;</li>
+            <li>maintain professional conduct in communications with Recruiters;</li>
+            <li>comply with all applicable medical council/board rules, professional standards, and employment laws and any other applicable laws;</li>
+            <li>keep your contact information updated so Recruiters may reach you.</li>
+          </ol>
+          <p>
+            <strong>4.2.</strong> You hereby unconditionally agree that You will not post or transmit:
+          </p>
+          <ol type="a">
+            <li>any contents or materials containing profanity;</li>
+            <li>any contents or materials which are false, inaccurate or misleading;</li>
+            <li>any material containing viruses or other malicious /harmful codes currently known or futuristic, or any other disruptive or harmful components;</li>
+            <li>contents that contain cyber bullying, spams, junk or other related material;</li>
+            <li>any false, defamatory, inaccurate, libelous, tortuous, abusive, vulgar, hateful, racist, bigoted, sexist, harassing, threatening, inflammatory, obscene, profane, sexually oriented, pornographic, child pornographic, promoting or providing assistance involving violence, significant risk of death or injury, or other unlawful activities and/or objectionable materials and contents;</li>
+            <li>any contents or material which may infringe or misappropriate any third party's copyright, patent, trademark, trade secret or other proprietary rights unless You obtain rights therein;</li>
+            <li>contents that violates or infringes the privacy or publicity or other rights of any party;</li>
+            <li>materials or contents that violates copyright, trademark, or other intellectual property rights;</li>
+            <li>contents that contain advertisement, solicitations, links to illegal activities including but not limited to money laundering, gambling etc;</li>
+            <li>contents or materials that hurts the religious sentiments or instigate hatred between communities, castes, people following different religious beliefs or any material which threatens the unity and integrity of India;</li>
+            <li>any content or material which violate any law or statute; or which violates consumer protection, engages in unfair competition, anti-discrimination or false advertising etc;</li>
+            <li>any content or material which could be harmful or potentially harmful to our server structure as determined at our sole discretion, including without limitation overloading our or our clients’ technical infrastructure;</li>
+          </ol>
+          <p>
+            <strong>4.3.</strong> You shall not, while utilising our services:
+          </p>
+          <ol type="a">
+            <li>Access, tamper with, penetrate or use – Our servers, computers, (including those of our 3rd party service providers), or other parts of the Zerotonin software which do not for part of the service.</li>
+            <li>probe, scan, or test the vulnerability of any system or network or breach or circumvent any security or authentication measures;</li>
+            <li>interfere with, or disrupt, (or attempt to do so), the access of any other User, or other registered customers/clients of Zerotonin, including, without limitation, sending a virus, malicious code, overloading, flooding, spamming, the services, or by scripting the creation of your content in such a manner as to interfere with or create an undue burden on the services.</li>
+            <li>Attempt to duplicate Zerotonin by reverse engineering or any other methods.</li>
+            <li>Share/lease Your account to third parties.</li>
+          </ol>
+
+          <hr class="divider" />
+
+          <h2 id="privacy">5. Privacy and Data Use</h2>
+          <p>
+            Your use of the platform is also subject to our <a href="privacy-policy.html" style="color: var(--brand); text-decoration: underline; font-weight: 600;">Privacy Policy</a>, which explains how we collect, use, store, and share personal data. By using the platform, you consent to the processing of your information as described in the Privacy Policy, including sharing your profile and application details with Recruiters when you apply or otherwise choose to share such information.
           </p>
 
           <hr class="divider" />
 
-          <h2>Intellectual Property</h2>
+          <h2 id="interactions">6. Interactions with Recruiters and Third Parties</h2>
           <p>
-            The platform, including its design, text, graphics, logos, software, and other content (excluding content
-            you submit), is owned by or licensed to Zerotonin Innovations Private Limited and is protected by
-            applicable intellectual property laws. You are granted a limited, non-exclusive, non-transferable,
-            revocable right to access and use the platform for its intended purpose, subject to these Terms. You shall
-            not acquire any title, rights, or interest in copyright and other Intellectual Property Rights in the
-            Zerotonin platform, software, source codes, object codes, or the Services rendered.
-          </p>
-          <p>
-            You retain ownership of content you submit (such as profile details, CV/resume, and application
-            information). You grant Zerotonin a worldwide, non-exclusive, royalty-free licence to host, store,
-            reproduce, display, and share such content solely for operating, improving, and providing the platform and
-            related services, including sharing with Recruiters at your direction (e.g., upon applying).
+            Any interactions, interviews, negotiations, background checks, credentialing, payments, travel, and agreements are strictly between you and the Recruiter (or other third parties). Zerotonin is not responsible for any disputes, claims, losses, or damages arising from such interactions. You are strongly advised not to make any payments to any Recruiter or third party without verifying legitimacy and receiving proper documentation.
           </p>
 
           <hr class="divider" />
 
-          <h2>Third Party Services</h2>
+          <h2 id="property">7. Intellectual Property</h2>
           <p>
-            We utilise third-party service providers in delivering this Service. By using our Services, you agree to be
-            bound by the relevant terms and conditions of those providers:
+            <strong>7.1.</strong> The platform, including its design, text, graphics, logos, software, and other content (excluding content you submit), is owned by or licensed to Zerotonin Innovations Private Limited, a company incorporated under the laws of India, having its registered office at Building No. XII/290, Kalappuravechamukalel, Ettumanur, Kottayam, Kerala, India and is protected by applicable intellectual property laws. You are granted a limited, non-exclusive, non-transferable, revocable right to access and use the platform for its intended purpose, subject to these Terms. You hereby agree and acknowledge that You shall not acquire any title, rights and interest in copyright and other Intellectual Property Rights in Zerotonin platform, software, source codes, object codes, etc., and the Services rendered, including any modifications, enhancements, modules and support materials.
           </p>
-          <ul>
+          <p>
+            <strong>7.2.</strong> You retain ownership of content you submit (such as profile details, CV/resume, and application information). You grant Zerotonin a worldwide, non-exclusive, royalty-free license to host, store, reproduce, display, and share such content solely for operating, improving, and providing the platform and related services, including sharing with Recruiters at your direction.
+          </p>
+
+          <hr class="divider" />
+
+          <h2 id="thirdparty">8. Third Party Services</h2>
+          <p>
+            We utilise the service of various third party service providers in bringing you this Service. While availing our Services, You hereby agree to be bound by the relevant terms and conditions of the third party service provider whose services We utilise. You may go through the terms and conditions/terms of usage of these third-party services providers below:
+          </p>
+          <ol type="a">
             <li>MongoDB Atlas</li>
-            <li>Amazon Web Services (AWS)</li>
-          </ul>
+            <li>Amazon Web Services</li>
+          </ol>
 
           <hr class="divider" />
 
-          <h2>Disclaimers</h2>
-          <div class="caps">
-            EXCEPT AS PROVIDED IN THIS ToS, AND TO THE FULLEST EXTENT ALLOWED BY APPLICABLE LAW, WE MAKE NO CLAIMS,
-            WARRANTIES OR REPRESENTATIONS, EXPRESS, IMPLIED OR STATUTORY, AND WE EXPRESSLY WAIVE AND DISCLAIM ANY AND
-            ALL IMPLIED CLAIMS, WARRANTIES AND REPRESENTATIONS OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR
-            SATISFACTORY QUALITY WITH RESPECT TO THE SERVICE WE PROVIDE.
+          <h2 id="disclaimers">9. Disclaimers</h2>
+          <div class="caps" style="font-weight: 700; color: #1e293b;">
+            <strong>9.1.</strong> EXCEPT AS PROVIDED AND STATED IN THIS ToS, AND TO THE FULLEST EXTENT ALLOWED BY APPLICABLE LAW, WE MAKE NO CLAIMS, WARRANTIES OR REPRESENTATIONS, EXPRESS, IMPLIED OR STATUTORY, AND WE EXPRESSLY WAIVE AND DISCLAIM ANY AND ALL IMPLIED CLAIMS, WARRANTIES AND REPRESENTATIONS OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, SATISFACTORY QUALITY, WITH RESPECT TO THE SERVICE WE PROVIDE.
           </div>
           <p>
-            Zerotonin serves as a platform facilitating connections between job seekers and recruiters. We do not make
-            any assurances regarding the outcomes or success of your job search. We endeavour to keep our services
-            error-free and secure; however, we shall not be liable for any data loss, corruption, or damages caused by
-            viruses, malicious codes, server breakdowns, hacking, etc. We do not guarantee uninterrupted service as
-            uptime depends on factors beyond our control.
+            <strong>9.2.</strong> Zerotonin serves as a platform facilitating connections between job seekers and recruiters. We do not make any assurances regarding the outcomes or success of your job search.
           </p>
           <p>
-            We shall not be liable for any default, loss of data, or interruption in Services attributable to Force
-            Majeure Events, including but not limited to acts of God, fires, explosions, pandemics, wars, riots, labour
-            disputes, governmental requirements, hacking, server malfunctioning, or issues with third-party service
-            providers.
+            <strong>9.3.</strong> We endeavour to keep our services to be error free and secure however, we shall not be liable for any data loss, corruption or damages cause due to any virus, malicious codes, server breakdowns, hacking etc.
           </p>
-
-          <hr class="divider" />
-
-          <h2>Limitation of Liability</h2>
           <p>
-            To the maximum extent permitted by law, Zerotonin shall not be liable for any indirect, incidental,
-            special, consequential, exemplary, or punitive damages, or for any loss of profits, loss of opportunity,
-            loss of data, or business interruption arising out of or related to your use of (or inability to use) the
-            platform, any job posting, or any interaction with a Recruiter, even if advised of the possibility of such
-            damages.
+            <strong>9.4.</strong> We do not guarantee an uninterrupted service as the uptime depends on several factors beyond our control including but not limited to your internet connection, its speed and availability, availability of hardware requirements at your end viz., computer, smartphone etc., electricity, uptime of the cloud service where we have hosted our applications etcetera. Services may also be interrupted when some of the contents posted by you does trigger our (including our service provider’s) malicious code and virus blocking system and we take no responsibility of such interruptions even in cases of false triggers.
+          </p>
+          <p>
+            <strong>9.5.</strong> We shall not be liable for any default, loss of data or interruption in Services attributable to events beyond our reasonable control. Such events (the “Force Majeure Events”) shall include but not limited to acts of God, fires, explosions, accidents, unusually severe weather conditions, pandemics, embargoes, wars, riots, labour disputes, strikes, governmental requirements, hacking, server mal-functioning, issues with our third party service providers and any other similar events.
           </p>
 
           <hr class="divider" />
 
-          <h2>Indemnity</h2>
+          <h2 id="liability">10. Limitation of Liability</h2>
           <p>
-            You agree to fully indemnify, defend, and hold harmless Zerotonin Innovations Private Limited, together
-            with its directors, officers, employees, and affiliates, from and against any and all claims, demands,
-            actions, proceedings, liabilities, damages, losses, costs, and expenses (including reasonable attorneys'
-            fees), whether direct or indirect, arising out of or in connection with: (a) your access to or use of the
-            platform; (b) any breach of these Terms; (c) any content submitted by you through the platform; (d) your
-            interactions or transactions with any Recruiter or third party; or (e) any act, omission, or negligence on
-            your part. This obligation survives the termination or expiration of these Terms.
+            To the maximum extent permitted by law, Zerotonin shall not be liable for any indirect, incidental, special, consequential, exemplary, or punitive damages, or for any loss of profits, loss of opportunity, loss of data, or business interruption arising out of or related to your use of (or inability to use) the platform, any job posting, or any interaction with a Recruiter, even if advised of the possibility of such damages.
           </p>
 
           <hr class="divider" />
 
-          <h2>Suspension and Termination</h2>
+          <h2 id="indemnity">11. Indemnity</h2>
           <p>
-            We may suspend or terminate your access to the platform at any time if we reasonably believe you have
-            violated these Terms, created risk or potential legal exposure for Zerotonin or other users, or used the
-            platform in a manner inconsistent with its intended purpose. You may stop using the platform at any time.
-            Provisions that by their nature should survive termination (including disclaimers, limitation of liability,
-            indemnity, and governing law) shall survive.
+            You hereby agree to fully indemnify, defend, and hold harmless Zerotonin Innovations Private Limited, together with its directors, officers, employees, and affiliates (collectively, the “Indemnified Parties”), from and against any and all claims, demands, actions, proceedings, liabilities, damages, losses, costs, and expenses (including, without limitation, reasonable attorneys’ fees and legal expenses), whether direct or indirect, arising out of or in connection with: (a) your access to or use of the platform; (b) any breach or violation by you of these Terms of Service; (c) any content or material submitted, posted, or otherwise made available by you through the platform; (d) your interactions, communications, or transactions with any Recruiter or third party; or (e) any act, omission, or negligence on your part. This indemnification obligation shall survive the termination or expiration of these Terms and your use of the platform.
           </p>
 
           <hr class="divider" />
 
-          <h2>Governing Law and Jurisdiction</h2>
+          <h2 id="suspension">12. Suspension and Termination</h2>
           <p>
-            These Terms shall be governed by and construed in accordance with the laws of India. Subject to applicable
-            law, the courts at <strong>Kottayam, Kerala</strong> shall have exclusive jurisdiction over any disputes
-            arising out of or in connection with these Terms and/or your use of the platform.
+            We may suspend or terminate your access to the platform (in whole or in part) at any time if we reasonably believe you have violated these Terms, created risk or potential legal exposure for Zerotonin or other users, or used the platform in a manner inconsistent with its intended purpose. You may stop using the platform at any time. Provisions which by their nature should survive termination (including disclaimers, limitation of liability, indemnity, and governing law) shall survive.
           </p>
 
           <hr class="divider" />
 
-          <h2>Changes to These Terms</h2>
+          <h2 id="governing-law">13. Governing Law and Jurisdiction</h2>
           <p>
-            We may update these Terms from time to time. The updated Terms will be effective upon posting on the
-            platform (or on such later date as may be specified). Your continued use of the platform after the effective
-            date constitutes acceptance of the updated Terms.
+            These Terms shall be governed by and construed in accordance with the laws of India. Subject to applicable law, the courts at <strong>Kottayam, Kerala</strong> shall have exclusive jurisdiction over any disputes arising out of or in connection with these Terms and/or your use of the platform.
+          </p>
+
+          <hr class="divider" />
+
+          <h2 id="changes">14. Changes to These Terms</h2>
+          <p>
+            We may update these Terms from time to time. The updated Terms will be effective upon posting on the platform (or on such later date as may be specified). Your continued use of the platform after the effective date constitutes acceptance of the updated Terms.
           </p>
 
           <hr class="divider" />
@@ -418,7 +457,7 @@
           <div class="grid">
             <div class="row">
               <div class="label">Registered Office</div>
-              <div class="value">Building No. XII/290, Kalappuravechamukalel, Ettumanur, Kottayam, Kerala, India</div>
+              <div class="value">Building No. XII/290, Ettumanoor, Kottayam, Kerala - 686631</div>
             </div>
             <div class="row">
               <div class="label">Support Email</div>
@@ -435,7 +474,7 @@
           </div>
 
           <p style="margin-top: 16px; color: #64748b; font-size: 12px;">
-            Last updated: May 19, 2026.
+            Last updated: May 29, 2026.
           </p>
 
         </div>
